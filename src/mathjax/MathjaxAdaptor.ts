@@ -61,7 +61,7 @@ export interface MathFragmentResponse {
 
 function parseSize(size: string | number, config: Partial<MathToSVGConfig> = {}) {
     if (typeof size === 'number') return size;
-    const unit = size.substr(-2);
+    const unit = size.slice(-2);
     return _.get(config, unit, 1) * parseFloat(size);
 }
 
