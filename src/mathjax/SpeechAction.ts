@@ -12,7 +12,7 @@ function removeSemanticData(math) {
         const attributes = node.attributes.getAllAttributes();
         delete attributes.xmlns;    // some internal nodes get this attribute for some reason
         for (const name of Object.keys(attributes)) {
-            if (name.substr(0, 14) === 'data-semantic-' && name !== 'data-semantic-speech') {
+            if (name.slice(0, 14) === 'data-semantic-' && name !== 'data-semantic-speech') {
                 delete attributes[name];
             }
         }

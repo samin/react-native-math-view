@@ -5,12 +5,12 @@
  * @format
  */
 const path = require('path');
-const blacklist = require('metro-config/src/defaults/blacklist');
+const exclusionList = require('metro-config/src/defaults/exclusionList');
 
 module.exports = {
   resolver: {
     sourceExts: ['ts', 'tsx', 'js'],
-    blacklistRE: blacklist([
+    blockList: exclusionList([
       path.resolve(__dirname, '../node_modules/react'),
       path.resolve(__dirname, '../node_modules/react-native'),
       path.resolve(__dirname, '../node_modules/react-native-svg'),

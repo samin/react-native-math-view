@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Ref } from 'react';
-import { SvgFromXml } from 'react-native-svg';
+import { SvgXml } from 'react-native-svg';
 import { MathViewInjectedProps, MathViewProps, styles } from '../common';
 import { ErrorComponent } from '../Error';
 import { mathViewRender } from '../hooks';
@@ -9,7 +9,7 @@ import { mathViewRender } from '../hooks';
 const FallbackMathView = mathViewRender((props: MathViewInjectedProps, ref: Ref<any>) => {
     const { size, svg, ...passProps } = props;
     return (
-        <SvgFromXml
+        <SvgXml
             {...passProps}
             xml={svg}
             {...size}
